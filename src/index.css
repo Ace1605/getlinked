@@ -1,13 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #150e28;
+  min-width: 365px;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+input::placeholder {
+  color: #fff; /* Change this to the desired color */
+}
+.fade::placeholder {
+  color: rgba(
+    255,
+    255,
+    255,
+    0.253
+  ) !important; /* Change this to the desired color */
+}
+
+.toastContainer {
+  z-index: 100;
+}
+
+.ReactModal__Overlay {
+  z-index: 1000;
+}
+
+.ReactModal__Content--after-open {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  border-color: #d434fe !important;
 }

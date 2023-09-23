@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "CD Bold";
+  src: url("../fonts/ClashDisplay-Bold.ttf");
+}
+
+@font-face {
+  font-family: "CD Regular";
+  src: url("../fonts/ClashDisplay-Regular.ttf");
+}
+
+@font-face {
+  font-family: "CD Light";
+  src: url("../fonts/ClashDisplay-Light.ttf");
+}
+
+@font-face {
+  font-family: "CD Medium";
+  src: url("../fonts/ClashDisplay-Medium.ttf");
+}
+@font-face {
+  font-family: "CD Thin";
+  src: url("../fonts/ClashDisplay-Extralight.ttf");
+}
+body {
+  font-family: "CD Medium" !important;
+  background-color: #150e28;
+  height: 100vh;
+}
+
+.App {
+  height: 100vh;
+}
+
+.inner-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+input::placeholder {
+  color: #fff; /* Change this to the desired color */
+}
+.fade::placeholder {
+  color: rgba(
+    255,
+    255,
+    255,
+    0.253
+  ) !important; /* Change this to the desired color */
+}
+
+textarea::placeholder {
+  color: #fff; /* Change this to the desired color */
+}
+
+.m-nav {
+  position: absolute;
+  z-index: 100;
+  width: 108%;
+  margin-top: -12%;
+  left: -6%;
+}
+
+@media (min-width: 600px) {
+  .m-nav {
+    margin-top: -15%;
+  }
+}
+
+.toastContainer {
+  z-index: 100;
+}
+
+.ReactModal__Overlay {
+  z-index: 1000;
+}
+
+.ReactModal__Content--after-open {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  border-color: #d434fe !important;
+}

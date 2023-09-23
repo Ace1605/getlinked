@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "CD Bold";
+  src: url("../fonts/ClashDisplay-Bold.ttf");
+}
+
+@font-face {
+  font-family: "CD Regular";
+  src: url("../fonts/ClashDisplay-Regular.ttf");
+}
+
+@font-face {
+  font-family: "CD Light";
+  src: url("../fonts/ClashDisplay-Light.ttf");
+}
+
+@font-face {
+  font-family: "CD Medium";
+  src: url("../fonts/ClashDisplay-Medium.ttf");
+}
+@font-face {
+  font-family: "CD Thin";
+  src: url("../fonts/ClashDisplay-Extralight.ttf");
+}
+
+$medium: "CD Medium";
