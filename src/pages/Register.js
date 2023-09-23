@@ -337,6 +337,7 @@ function Register() {
             {" "}
             <>
               <SplitForm
+                getting={loading}
                 data={cat}
                 getPayload={getPayload}
                 loading={submitting}

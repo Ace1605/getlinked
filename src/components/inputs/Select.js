@@ -52,14 +52,14 @@ const Wrapper = styled.div`
   }
 `;
 
-function Selects({ holder, data, getCat, getNum, load }) {
+function Selects({ holder, data, getCat, getNum, load, getting }) {
   const [isClearable, setIsClearable] = useState(true);
   const [isSearchable, setIsSearchable] = useState(true);
   const [isDisabled, setIsDisabled] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isRtl, setIsRtl] = useState(false);
   const [selected, setSelected] = useState(null);
-  const def = [{ value: "", label: holder }];
+  const def = [{ value: "", label: getting ? "..." : holder }];
   const options = [
     { value: 5, label: 5 },
     { value: 10, label: 10 },

@@ -8,6 +8,10 @@ const Wrapper = styled.div`
   position: relative;
   padding: 5rem 2.5rem;
 
+  @media (max-width: 960px) {
+    padding: 2.5rem 0.5rem;
+  }
+
   .bottom-left {
     position: absolute;
     bottom: 3rem;
@@ -40,10 +44,16 @@ const InnerWrapper = styled.div`
     font-size: 1.5rem;
     font-weight: 500;
     color: ${AppColors.WHITE};
+    @media (max-width: 960px) {
+      font-size: 1.3rem;
+    }
   }
 
   p {
     color: #fff;
+    @media (max-width: 960px) {
+      font-size: 0.9rem;
+    }
   }
   .flex {
     display: flex;

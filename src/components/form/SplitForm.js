@@ -41,6 +41,9 @@ const Wrapper = styled.div`
     font-size: 1.4rem;
     font-weight: 500;
     margin-bottom: 2rem;
+    @media (max-width: 960px) {
+      display: none;
+    }
   }
   h3 {
     color: #fff;
@@ -177,7 +180,7 @@ const InputWrap = styled.div`
   }
 `;
 
-function SplitForm({ data, getPayload, loading }) {
+function SplitForm({ data, getPayload, loading, getting }) {
   const inputElem = useRef();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -273,6 +276,7 @@ function SplitForm({ data, getPayload, loading }) {
             <Select
               load={loading}
               holder="Select your category"
+              getting={getting}
               data={data}
               getCat={getCat}
             />
@@ -305,6 +309,10 @@ function SplitForm({ data, getPayload, loading }) {
             color="#fff"
             width="10rem"
             bg="linear-gradient(45deg, #FF26B9, #903AFF )"
+            onClick={(e) => {
+              e.preventDefault();
+              getPayload(payload);
+            }}
             isloading={loading}
           >
             Submit
