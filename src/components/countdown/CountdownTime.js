@@ -48,8 +48,8 @@ function secondsUntil26thNoon() {
   const noon26th = new Date(
     currentDate.getFullYear(),
     currentDate.getMonth(),
-    currentDate.getDate(), // 26th day of the month
-    24, // Noon hour
+    currentDate.getDate() + 1, // 26th day of the month
+    18, // Noon hour
     0, // Minutes
     0 // Seconds
   );
