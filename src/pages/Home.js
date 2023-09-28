@@ -15,13 +15,11 @@ import Timeline from "../components/timeline/Timeline";
 
 const MainWrap = styled.div`
   position: relative;
+  overflow-x: hidden;
 `;
 
 const Wrapper = styled.div`
   position: relative;
-  padding: 2rem 3rem;
-  min-height: 100vh;
-  overflow-x: hidden;
 
   @media (max-width: 960px) {
     padding: 2rem 1rem;

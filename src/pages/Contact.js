@@ -8,6 +8,7 @@ import { AppColors } from "../config/AppColors";
 import { Back } from "../svg/Menu";
 import { FaceBook, Insta, LinkedIn, Twitter } from "../svg/Social";
 import { toast } from "react-toast";
+import { useNavigate } from "react-router-dom";
 
 const Wrapper = styled.div`
   position: relative;
@@ -30,8 +31,14 @@ const Wrapper = styled.div`
   .show-mobile {
     display: none;
     @media (max-width: 960px) {
+      position: relative;
+      z-index: 2;
       display: block;
       margin-top: 2rem;
+    }
+
+    svg {
+      cursor: pointer;
     }
   }
 `;
@@ -202,6 +209,7 @@ const Flex = styled.div`
   }
 `;
 function Contact() {
+  const navigate = useNavigate();
   const [submitting, setSubmitting] = useState(false);
   const [value, setValue] = useState(null);
 
@@ -239,7 +247,9 @@ function Contact() {
           <Navbar />
         </div>
         <div className="show-mobile">
-          <Back />
+          <span onClick={() => navigate(-1)}>
+            <Back />
+          </span>
         </div>
         <RegContent>
           <img
